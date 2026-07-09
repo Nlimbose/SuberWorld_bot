@@ -10,7 +10,10 @@ from telegram.ext import (
     filters
 )
 
-from config import TOKEN, ADMIN_ID
+import os
+
+TOKEN = os.getenv("TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 from database import add_user, users_count, get_users
 
 
